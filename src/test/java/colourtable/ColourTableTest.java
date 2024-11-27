@@ -7,26 +7,26 @@ class ColourTableTest {
 
     @Test
     void testColourTableConstructor() {
-        // 测试无效参数，确保构造函数抛出 IllegalArgumentException
+        // Test for invalid parameters and make sure the constructor throws an IllegalArgumentException.
         assertThrows(IllegalArgumentException.class, () -> {
-            new ColourTable(-1);  // 提供无效参数 -1
+            new ColourTable(-1);  // Invalid parameter provided: -1
         });
 
         assertThrows(IllegalArgumentException.class, () -> {
-            new ColourTable(3);  // 提供无效参数 3
+            new ColourTable(3);  // Invalid parameter provided: 3
         });
 
-        // 测试有效参数，确保不会抛出异常
+        // Test valid parameters to ensure that no exceptions are thrown.
         assertDoesNotThrow(() -> {
-            new ColourTable(0);  // 提供有效参数 0
-        });
-
-        assertDoesNotThrow(() -> {
-            new ColourTable(1);  // 提供有效参数 1
+            new ColourTable(0);  // Provide valid parameter: 0
         });
 
         assertDoesNotThrow(() -> {
-            new ColourTable(2);  // 提供有效参数 2
+            new ColourTable(1);  // Provide valid parameter: 1
+        });
+
+        assertDoesNotThrow(() -> {
+            new ColourTable(2);  // Provide valid parameter: 2
         });
     }
 }

@@ -1,15 +1,20 @@
 package colourtable;
 
 public class ColourTable {
-    // 示例构造方法
+    // Color palette size
+    private int size;
+
     public ColourTable(int parameter) {
-        // 假设合法参数为 0, 1, 2，如果参数不在此范围则抛出异常
+        // Modify the parameter checking logic to ensure that 0, 1, and 2 are valid.
         if (parameter < 0 || parameter > 2) {
             throw new IllegalArgumentException("Invalid parameter: " + parameter);
         }
-        // 其他初始化逻辑
+        this.size = parameter;
+        // Other logical (empty implementation)
     }
 }
+
+
 
 
 
